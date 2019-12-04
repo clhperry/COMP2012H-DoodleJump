@@ -7,8 +7,6 @@ class MainCharacter: public Block
 {
 public:
     MainCharacter();
-    void moveHorizontal();
-    void moveVertical();
     void shoot();
     bool dropping();
 

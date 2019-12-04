@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,14 +15,19 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    
+protected:
+    void ketPressEvent(QKeyEvent* e);
 
 private slots:
     void on_startButton_clicked();
     void on_pauseButton_clicked();
     
 private:
+    bool lose();
     Ui::MainWindow *ui;
-    
     Impl* impl;
+    Block* block[20];
+    
 };
 #endif // MAINWINDOW_H

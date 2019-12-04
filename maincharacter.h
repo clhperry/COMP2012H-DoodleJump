@@ -12,6 +12,8 @@ public:
 
 private:
     int g;
+    int dy;
+    int dx;
 };
 
 #endif // MAINCHARACTER_H

@@ -6,9 +6,16 @@
 class MainCharacter: public Block
 {
 public:
+    MainCharacter();
+    void moveHorizontal();
+    void moveVertical();
+    void shoot();
+    bool dropping();
 
 private:
-
+    int dx;
+    int dy;
+    int g;
 };
 
 #endif // MAINCHARACTER_H

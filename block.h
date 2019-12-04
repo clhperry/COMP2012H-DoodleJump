@@ -11,9 +11,9 @@ class Block
 
 public:
     Block();
-    std::string setName();
+    void setName(std::string name);
     const std::string getName();
-    const QRect getRect();
+    const QRect& getRect();
     void setImage(std::string path);
     void moveHorizontally();
     void moveVertically();
@@ -22,7 +22,7 @@ public:
 private:
     std::string imagePath;
     std::string name;
-    QRect Rect;
+    QRect rect;
     GameImpl *hostImpl;
 };
 

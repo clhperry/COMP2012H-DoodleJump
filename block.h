@@ -9,10 +9,10 @@ class Block
 
 public:
     Block();
-    std::string getName();
+    std::string setName();
+    const std::string getName();
+    const QRect getRect();
     void setImage(std::string path);
-    int getHeight();
-    int getWidth();
     void moveHorizontally();
     void moveVertically();
 

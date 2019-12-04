@@ -4,6 +4,8 @@
 #include <string>
 #include <QRect>
 
+#include "gameimpl.h"
+
 class Block
 {
 

@@ -11,8 +11,6 @@ public:
     bool dropping();
 
 private:
-    int dx;
-    int dy;
     int g;
 };
 

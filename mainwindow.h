@@ -27,7 +27,6 @@ private:
     bool lose();
     Ui::MainWindow *ui;
     Impl* impl;
-    Block* block[20];
     
 };
 #endif // MAINWINDOW_H

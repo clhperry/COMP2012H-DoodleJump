@@ -1,7 +1,9 @@
 #ifndef PLATFORM_H
 #define PLATFORM_H
 
-#include<Block.h>
+#include<string>
+
+#include<block.h>
 
 class Platform : public Block 
 {

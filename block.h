@@ -21,8 +21,8 @@ private:
     std::string imagePath;
     std::string name;
     QRect Rect;
-    int dy;
     int dx;
+    int dy;
     GameImpl *hostImpl;
 };
 

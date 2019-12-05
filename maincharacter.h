@@ -2,7 +2,6 @@
 #define MAINCHARACTER_H
 
 #include <block.h>
-#include <QLabel>
 
 class MainCharacter: public Block
 {

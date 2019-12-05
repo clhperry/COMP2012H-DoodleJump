@@ -3,6 +3,7 @@
 
 #include <string>
 #include <QRect>
+#include <QKeyEvent> //for keyboard inputs
 
 #include "gameimpl.h"
 

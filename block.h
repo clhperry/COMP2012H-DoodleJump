@@ -6,7 +6,7 @@
 
 #include "gameimpl.h"
 
-class Block
+class Block : public QLabel //need to inherit QLabel in order to use setImage() Ref: PA3 
 {
 
 public:
@@ -14,11 +14,12 @@ public:
     void setName(std::string name);
     const std::string getName();
     const QRect& getRect();
-    void setImage(std::string path);
     void moveHorizontally();
     void moveVertically();
 
-
+protected: 
+    void setImage(std::string path); //referred PA3
+    
 private:
     std::string imagePath;
     std::string name;

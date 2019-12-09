@@ -8,8 +8,10 @@
 class Platform : public Block 
 {
 public: 
-    Platform();
-    void setColour();
+    Platform(const std::string& name, const std::string& colour, GameImpl* hostImpl, QWidget* parent = nullptr);
+    std::string getName() override;
+    std::string getColour();
+    void setColour(std::string& colour);
 private:
    std::string colour;
 };

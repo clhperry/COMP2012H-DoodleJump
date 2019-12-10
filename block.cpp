@@ -1,4 +1,12 @@
 #include "block.h"
+#include "helper.h"
+
+Block::Block(std::string name, QRect rect, GameImpl *hostImpl) {
+    setName(name);
+    this->hostImpl = hostImpl;
+    setImage(helper::getImagePath(name));
+    
+}
 
 void
 Block::setName(std::string name) {
@@ -15,8 +23,10 @@ Block::getRect() {
     return rect;
 }
 
-void setImage(std::string path) {
-
+void
+Block::setImage(std::string path) {
+    QPixmap pix(path.c_str());
+    this->setPixmap(pix);
 }
 
 void moveHorizontally() {

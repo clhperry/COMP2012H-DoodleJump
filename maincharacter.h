@@ -9,7 +9,7 @@ public:
     MainCharacter();
     void shoot();
     bool dropping();
-    void moveHorizontally();
+    void moveHorizontally(QKeyEvent* event);
     void moveVertically();
    
 private:

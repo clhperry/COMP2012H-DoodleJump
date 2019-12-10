@@ -5,6 +5,9 @@
 #include <QPushButton>
 #include <QStatusBar>
 
+class Platform;
+class MainCharacter;
+
 class GameImpl
 {
 

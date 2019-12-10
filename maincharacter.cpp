@@ -11,6 +11,5 @@ Maincharacter::moveHorizontally() {
 }
 
 //Jump
-Maincharacter::moveVertically() {
-  if (Keyboard::isKeyPressed(Keyboard::Up) && QKeyEvent::count() < 1) y+=3; //pseudocode - use QKeyEvent to implement
+/*Maincharacter::moveVertically() {
 }

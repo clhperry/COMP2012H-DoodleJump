@@ -26,7 +26,7 @@ private slots:
 private:
     bool lose();
     Ui::MainWindow *ui;
-    Impl* impl;
+    GameImpl* gameImpl;
     
 };
 #endif // MAINWINDOW_H

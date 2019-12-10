@@ -17,7 +17,7 @@ public:
     ~MainWindow();
     
 protected:
-    void ketPressEvent(QKeyEvent* e);
+    void keyPressEvent(QKeyEvent* e);
 
 private slots:
     void on_startButton_clicked();

@@ -3,8 +3,8 @@
 
 #include "block.h"
 
-namespace Helper {
-  std::string getImagePath(std:L:string name, int status = 0);
+namespace helper {
+  std::string getImagePath(std::string name, int status = 0);
   bool checkCollision(Block& b1, Block& b2);
 }
 

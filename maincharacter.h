@@ -9,7 +9,9 @@ public:
     MainCharacter();
     void shoot();
     bool dropping();
-
+    void moveHorizontally();
+    void moveVertically();
+   
 private:
     int g;
     int dy;

@@ -4,6 +4,7 @@
 Block::Block(std::string name, QRect rect, GameImpl *hostImpl) {
     setName(name);
     this->hostImpl = hostImpl;
+    this->rect = rect;
     setImage(helper::getImagePath(name));
     
 }

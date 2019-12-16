@@ -1,27 +1,22 @@
 #include "block.h"
 #include "helper.h"
 
-Block::Block(std::string name, QRect rect, GameImpl *hostImpl) {
-    setName(name);
+Block::Block(std::string type, QPoint topLeft, QPoint bottomRight, GameImpl *hostImpl) {
     this->hostImpl = hostImpl;
-    this->rect = rect;
-    setImage(helper::getImagePath(name));
+    setRect(topLeft, bottomRight);
+    this->type = type;
+    setImage(helper::getImagePath(type));
     
 }
 
-void
-Block::setName(std::string name) {
-    this->name = name;
-}
-
 const std::string
-Block::getName() {
-    return name;
+Block::getType() {
+    return type;
 }
 
-const QRect&
+const QRect
 Block::getRect() {
-    return rect;
+    return this->frameRect();
 }
 
 void
@@ -31,9 +26,9 @@ Block::setImage(std::string path) {
 }
 
 void moveHorizontally() {
-
+    return;
 }
 
 void moveVertically() {
-
+    return;
 }

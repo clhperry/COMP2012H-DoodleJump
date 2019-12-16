@@ -7,7 +7,7 @@
 
 namespace helper {
   std::string getImagePath(std::string type, int status = 0);
-  std::string generateName(std::vector<Block> pool, std::string type);
+  std::string generateName(std::vector<Block*> pool, std::string type);
   bool checkCollision(Block& b1, Block& b2);
 }
 

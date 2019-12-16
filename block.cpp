@@ -38,16 +38,7 @@ Block::setImage(std::string path) {
     this->setPixmap(pix);
 }
 
-void moveHorizontally() {
-    return;
-}
-
-void moveVertically() {
-    return;
-}
-
-void
-Block::setPos(){
+void moveDownVertically() {
     this->getRect().topLeft().setY(this->getRect().topLeft().y()-2);
     this->getRect().bottomRight().setY(this->getRect().topLeft().y()-2);
     this->setFrameRect(this->getRect());

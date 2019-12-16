@@ -10,10 +10,10 @@ class Block : public QLabel
 {
 
 public:
-    Block(std::string type, QPoint topLeft, QPoint bottomRight, GameImpl *hostImpl);
+    Block(std::string type, QPoint topLeft, QPoint bottomRight, GameImpl *hostImpl, QWidget *parent = nullptr);
+    Block(const Block& cobj);
     const std::string getType();
     const QRect getRect();
-    void setRect(QPoint topLeft, QPoint bottomRight);
     void moveHorizontally();
     void moveVertically();
 

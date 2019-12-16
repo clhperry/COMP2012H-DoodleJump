@@ -5,7 +5,7 @@
 #include <QPushButton>
 #include <QStatusBar>
 
-class Platform;
+class Block;
 class MainCharacter;
 
 class GameImpl
@@ -13,14 +13,15 @@ class GameImpl
 
 public:
     GameImpl(QLabel *backgroundLabel, QStatusBar *statusBar);
-    void addComponent(const std::string &name, QRect(const QPoint& topLeft, const QPoint& bottomRight));
-    void deleteComponent(const std::string &name);
-    void checkCollision( );
-    void displayScore( );
+    void addComponent(const std::string &type, const QPoint& topLeft, const QPoint& bottomRight);
+    void deleteComponent();
+    void checkDeath();
+    std::vector<Block> getPool();
 
 
 private:
-    bool dead;
+    std::vector<Block> pool;
+    MainCharacter* mc;
     QStatusBar* statusBar; // To show score
     void backgroundInit(); // Set background color or add a pic
 

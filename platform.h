@@ -2,18 +2,15 @@
 #define PLATFORM_H
 
 #include<string>
-
-#include<block.h>
+#include"block.h"
 
 class Platform : public Block 
 {
 public: 
-    Platform(const std::string& name, const std::string& colour, GameImpl* hostImpl, QWidget* parent = nullptr);
-    const std::string getName() override;
-    const std::string getColour();
-    void setColour(std::string& colour);
+    Platform(QPoint topLeft, QPoint bottomRight, GameImpl* hostImpl);
+
 private:
    std::string colour;
 };
 
-#endif
+#endif // PLATFORM_H

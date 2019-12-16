@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     block.cpp\
+    gameimpl.cpp \
     helper.cpp\
     main.cpp \
     maincharacter.cpp\

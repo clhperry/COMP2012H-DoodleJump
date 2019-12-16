@@ -14,8 +14,7 @@ public:
     Block(const Block& cobj);
     const std::string getType();
     const QRect getRect();
-    void moveHorizontally();
-    void moveVertically();
+    virtual void setPos();
 
 protected:
     void setImage(std::string path); //referred PA3

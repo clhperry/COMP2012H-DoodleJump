@@ -27,7 +27,7 @@ MainCharacter::moveHorizontally(QKeyEvent* event) {
 
 void
 MainCharacter::acceleration() {
-    dy = dy-g;
+    dy = dy+g;
 }
 
 void

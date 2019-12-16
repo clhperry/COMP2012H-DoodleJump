@@ -1,11 +1,14 @@
 #include "platform.h"
+#include "helper.h"
 
 #include <string>
 
-Platform::Platform(const std::string& name, GameImpl* hostImpl, QWidget* parent): Block(name, hostImpl, parent) {
-  setImage(Helper::getImagePath("Platform"));
+Platform::Platform(QPoint topLeft, QPoint bottomRight, GameImpl* hostImpl):
+    Block("Platform", topLeft, bottomRight, hostImpl) {
+
 }
 
+/*
 std::string Platform::getName(){
   return "Platform";
 }
@@ -16,7 +19,7 @@ std::string Platform::getColour(){
 
 void Platform::setColour(std::string& colour){
   colour = "green";
-  /*
+
   int random;
   if (score < 1000) (hostImpl getScore();)
     random = 0;
@@ -30,4 +33,3 @@ void Platform::setColour(std::string& colour){
   if (random == 2)
     setImage(Helper::getImagePath("Platform". 2)); white colour ,dissappear after being stepped on
   */
-}

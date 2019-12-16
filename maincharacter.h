@@ -11,7 +11,7 @@ public:
     void acceleration();
     void setDead(bool dead);
     bool getDead();
-    void setPos();
+    void setPos() override;
    
 private:
     bool dead = false;

@@ -1,13 +1,26 @@
 #include "block.h"
 #include "helper.h"
 
-Block::Block(std::string type, QPoint topLeft, QPoint bottomRight, GameImpl *hostImpl) {
+Block::Block(std::string type, QPoint topLeft, QPoint bottomRight,
+             GameImpl *hostImpl, QWidget *parent):
+                                                QLabel(parent) {
     this->hostImpl = hostImpl;
-    setRect(topLeft, bottomRight);
+    setFrameRect(QRect(topLeft, bottomRight));
     this->type = type;
     setImage(helper::getImagePath(type));
     
 }
+
+/*
+Block::Block(const Block& cobj) : QLabel(cobj.nativeParentWidget()) {
+
+    this->hostImpl = cobj.hostImpl;
+    setRect(cobj.rect().topLeft(), cobj.rect().bottomRight());
+    this->type = cobj.type;
+    setImage(helper::getImagePath(type));
+
+}
+*/
 
 const std::string
 Block::getType() {

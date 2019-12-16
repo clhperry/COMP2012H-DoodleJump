@@ -6,18 +6,17 @@
 class MainCharacter: public Block
 {
 public:
-    MainCharacter(QPoint topLeft, QPoint topRight, GameImpl *hostImpl);
-    void shoot();
-    bool dropping();
+    MainCharacter(QPoint topLeft, QPoint BottomRight, GameImpl *hostImpl);
     void moveHorizontally(QKeyEvent* event);
-    void moveVertically();
+    void acceleration();
     void setDead(bool dead);
     bool getDead();
+    void setPos();
    
 private:
     bool dead = false;
-    int g = 10;
-    int dy = 10;
+    int g = 2;
+    int dy = -34;
     int dx = 0;
 };
 

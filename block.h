@@ -14,6 +14,7 @@ public:
     Block(const Block& cobj);
     const std::string getType();
     const QRect getRect();
+    void moveVertically();
     virtual void setPos();
 
 protected:

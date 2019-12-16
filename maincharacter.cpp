@@ -1,12 +1,23 @@
 #include "maincharacter.h"
 //#include <QDebug>
 
-Maincharacter::Maincharacter() {
-  setImage(/*include image path later*/);
+MainCharacter::MainCharacter(QPoint topLeft, QPoint bottomRight, GameImpl *hostImpl):Block("Maincharacter", topLeft, bottomRight, hostImpl) {
+
 }
 
+void
+MainCharacter::setDead(bool dead) {
+    this->dead = dead;
+}
+
+bool
+MainCharacter::getDead() {
+    return dead;
+}
+
+/*
 //move left & right
-Maincharacter::moveHorizontally(QKeyEvent* event) {
+MainCharacter::moveHorizontally(QKeyEvent* event) {
   if (event->key() == Qt::Key_Left && QKeyEvent::count() < 1) {
     setPos(x()-10, y()); //move left
   }
@@ -15,5 +26,10 @@ Maincharacter::moveHorizontally(QKeyEvent* event) {
 }
 
 //Jump
-/*Maincharacter::moveVertically() {
+void
+MainCharacter::moveVertically() {
+
 }
+}
+
+*/

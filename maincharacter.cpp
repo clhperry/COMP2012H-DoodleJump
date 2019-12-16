@@ -15,21 +15,27 @@ MainCharacter::getDead() {
     return dead;
 }
 
-/*
-//move left & right
-MainCharacter::moveHorizontally(QKeyEvent* event) {
-  if (event->key() == Qt::Key_Left && QKeyEvent::count() < 1) {
-    setPos(x()-10, y()); //move left
-  }
-  if (event->key() == Qt::Key_Right && QKeyEvent::count() < 1) {
-    setPos(x()+10, y()); //move right
-}
-
-//Jump
 void
-MainCharacter::moveVertically() {
-
+MainCharacter::moveHorizontally(QKeyEvent* event) {
+  if (event->key() == Qt::Key_Left) {
+    dx = dx-1;
+  }
+  if (event->key() == Qt::Key_Right) {
+    dx = dx+1;
+  }
 }
+
+void
+MainCharacter::acceleration() {
+    dy = dy-g;
 }
 
-*/
+void
+MainCharacter::setPos(){
+    this->getRect().topLeft().setX(this->getRect().topLeft().x()+dx);
+    this->getRect().topLeft().setY(this->getRect().topLeft().y()+dy);
+    this->getRect().bottomRight().setX(this->getRect().topLeft().x()+dx);
+    this->getRect().bottomRight().setY(this->getRect().topLeft().y()+dy);
+    this->setFrameRect(this->getRect());
+}
+

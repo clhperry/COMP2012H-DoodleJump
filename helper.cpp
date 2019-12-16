@@ -6,7 +6,7 @@ namespace helper {
       return b1.getRect().intersects(b2.getRect()); // intersected = collided = true
     }
 
-    std::string generateName(std::vector<Block> pool, std::string type) {
+    std::string generateName(std::vector<Block*> pool, std::string type) {
         return type + std::to_string(pool.size());
     }
 

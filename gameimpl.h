@@ -16,11 +16,11 @@ public:
     void addComponent(const std::string &type, const QPoint& topLeft, const QPoint& bottomRight);
     void deleteComponent();
     void checkDeath();
-    std::vector<Block> getPool();
+    std::vector<Block*> getPool();
 
 
 private:
-    std::vector<Block> pool;
+    std::vector<Block*> pool;
     MainCharacter* mc;
     QStatusBar* statusBar; // To show score
     void backgroundInit(); // Set background color or add a pic
